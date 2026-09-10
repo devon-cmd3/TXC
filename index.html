@@ -9,12 +9,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <nav class="nav">
         <div class="nav-brand">
-        <img id="badgeImg" src="badge.jpg" alt="Xavier Cup badge">
-        <span>ARCADE OF CHAMPIONS</span>
+            <img id="badgeImg" src="badge.jpg" alt="Xavier Cup badge">
+            <span>ARCADE OF CHAMPIONS</span>
         </div>
-        <div class="nav-status">Today is <b id="todayLabel">—</b></div>
+        <div class="nav-right">
+            <div class="nav-status">Today is <b id="todayLabel">—</b></div>
+            <a class="nav-btn" href="overall/overall.html">Overall Standings</a>
+        </div>
     </nav>
 
     <div class="hero">
@@ -22,31 +26,31 @@
         <div class="hero-caption">Intramurals scoreboard &amp; schedule</div>
     </div>
 
-    <main>
-        <section>
-            <div class="section-title">SELECT YOUR DAY</div>
-            <div class="date-strip" id="dateStrip"></div>
-        </section>
+<main>
+    <section>
+        <div class="section-title">SELECT YOUR DAY</div>
+        <div class="date-strip" id="dateStrip"></div>
+    </section>
 
-        <section>
-            <div class="section-title">CHOOSE A GAME</div>
-            <div class="sport-grid" id="sportGrid"></div>
-            <div class="empty-note" id="noSportsNote" style="display:none;">No games scheduled this day.</div>
-        </section>
+    <section>
+        <div class="section-title">CHOOSE A GAME</div>
+        <div class="sport-grid" id="sportGrid"></div>
+        <div class="empty-note" id="noSportsNote" style="display:none;">No games scheduled this day.</div>
+    </section>
 
-        <section id="gamesSection">
-            <div class="games-head">
-                <h2 id="gamesTitle">—</h2>
-                <div class="sub" id="gamesSub"></div>
-            </div>
-            <div class="game-list" id="gameList"></div>
-        </section>
-    </main>
+    <section id="gamesSection">
+        <div class="games-head">
+            <h2 id="gamesTitle">—</h2>
+            <div class="sub" id="gamesSub"></div>
+        </div>
+        <div class="game-list" id="gameList"></div>
+    </section>
+</main>
 
-    <footer>
-        <img id="footerBadge" src="badge.jpg" alt="Xavier Cup 2025">
-        THE XAVIER CUP 2026 — not final bro, just a prototype.
-    </footer>
+<footer>
+    <img id="footerBadge" src="badge.jpg" alt="Xavier Cup 2025">
+    THE XAVIER CUP 2025 — prototype scoreboard, schedules and scores are for demo purposes only.
+</footer>
 
 <script src="script.js"></script>
 </body>

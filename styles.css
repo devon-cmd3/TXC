@@ -76,12 +76,37 @@ a{color:inherit;}
     color:var(--gold);
 }
 
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
 .nav-status{
     font-size:16px;
     color:var(--dim);
 }
 
-.nav-status b{ color:var(--pink); }
+.nav-status b{color:var(--pink);}
+
+.nav-btn{
+    font-family:var(--font-display);
+    font-size:10px;
+    letter-spacing:1px;
+    color:var(--gold);
+    background:var(--bg-panel);
+    border:2px solid var(--line);
+    padding:10px 14px;
+    text-decoration:none;
+    white-space:nowrap;
+    transition:border-color .12s ease, background .12s ease, transform .08s ease, color .12s ease;
+}
+
+.nav-btn:hover{
+    border-color:var(--gold);
+    background:linear-gradient(180deg, var(--violet) 0%, #6a2aa8 100%);
+    color:#fff;
+    transform:translateY(-2px);
+}
 
 .hero{
     position:relative;
@@ -121,7 +146,7 @@ main{
     padding:36px 20px 80px;
 }
 
-section{ margin-bottom:44px; }
+section{margin-bottom:44px;}
 
 .section-title{
     font-family:var(--font-display);
@@ -151,7 +176,7 @@ section{ margin-bottom:44px; }
     transition:transform .08s ease, border-color .12s ease, background .12s ease;
     position:relative;
 }
-.date-pill:hover{ border-color:var(--violet-bright); }
+.date-pill:hover{border-color:var(--violet-bright);}
 
 .date-pill .dow{
     font-size:14px;
@@ -173,17 +198,17 @@ section{ margin-bottom:44px; }
     margin:8px auto 0;
     visibility:hidden;
 }
-.date-pill.has-games .dot{ visibility:visible; }
-.date-pill.is-today{ border-color:var(--gold); }
-.date-pill.is-today .dow{ color:var(--gold); }
+.date-pill.has-games .dot{visibility:visible;}
+.date-pill.is-today{border-color:var(--gold);}
+.date-pill.is-today .dow{color:var(--gold);}
 
 .date-pill.selected{
     background:linear-gradient(180deg, var(--violet) 0%, #6a2aa8 100%);
     border-color:var(--violet-bright);
     transform:translateY(-3px);
 }
-.date-pill.selected .dow, .date-pill.selected .dom{ color:#fff; }
-.date-pill.selected .dot{ background:var(--gold); }
+.date-pill.selected .dow, .date-pill.selected .dom{color:#fff;}
+.date-pill.selected .dot{background:var(--gold);}
 
 .sport-grid{
     display:grid;
@@ -199,7 +224,7 @@ section{ margin-bottom:44px; }
     cursor:pointer;
     transition:border-color .12s ease, background .12s ease;
 }
-.sport-tile:hover{ border-color:var(--violet-bright); }
+.sport-tile:hover{border-color:var(--violet-bright);}
 
 .sport-tile .icon{
     font-size:26px;
@@ -223,7 +248,7 @@ section{ margin-bottom:44px; }
     background:linear-gradient(180deg, var(--pink) 0%, #b02c6e 100%);
     border-color:var(--pink);
 }
-.sport-tile.selected .label, .sport-tile.selected .count{ color:#fff; }
+.sport-tile.selected .label, .sport-tile.selected .count{color:#fff;}
 
 .empty-note{
     font-size:17px;
@@ -253,7 +278,7 @@ section{ margin-bottom:44px; }
     color:var(--dim);
 }
 
-.game-list{ display:flex; flex-direction:column; gap:12px; }
+.game-list{display:flex; flex-direction:column; gap:12px;}
 
 .game-card{
     background:var(--bg-panel);
@@ -261,8 +286,8 @@ section{ margin-bottom:44px; }
     padding:16px 18px;
     position:relative;
 }
-.game-card.is-live{ border-color:var(--live); }
-.game-card.is-final{ border-color:var(--line-soft); opacity:.92; }
+.game-card.is-live{border-color:var(--live);}
+.game-card.is-final{border-color:var(--line-soft); opacity:.92;}
 
 .game-meta{
     display:flex;
@@ -298,8 +323,8 @@ section{ margin-bottom:44px; }
 }
 
 @keyframes pulse{
-    0%,100%{ opacity:1; }
-    50%{ opacity:.55; }
+    0%,100%{opacity:1;}
+    50%{opacity:.55;}
 }
 
 .matchup{
@@ -314,7 +339,7 @@ section{ margin-bottom:44px; }
     align-items:center;
     gap:10px;
 }
-.team.right{ flex-direction:row-reverse; text-align:right; }
+.team.right{flex-direction:row-reverse; text-align:right;}
 
 .team-dot{
     width:14px; height:14px;
@@ -326,7 +351,7 @@ section{ margin-bottom:44px; }
     letter-spacing:.3px;
 }
 
-.team-name.winner{ color:var(--win); }
+.team-name.winner{color:var(--win);}
 
 .score{
     font-family:var(--font-display);
@@ -336,8 +361,8 @@ section{ margin-bottom:44px; }
     text-align:center;
 }
 
-.score.dim{ color:var(--dim); }
-.score.winner{ color:var(--win); }
+.score.dim{color:var(--dim);}
+.score.winner{ color:var(--win);}
 .score-sep{
     font-size:15px;
     color:var(--dim);
@@ -366,8 +391,8 @@ footer img{
 }
 
 @media (max-width:600px){
-    .section-title{ font-size:11px; }
-    .games-head h2{ font-size:12px; }
-    .team-name{ font-size:16px; }
-    .score{ font-size:21px; }
+    .section-title{font-size:11px;}
+    .games-head h2{font-size:12px;}
+    .team-name{font-size:16px;}
+    .score{font-size:21px;}
 }

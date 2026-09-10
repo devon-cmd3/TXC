@@ -41,7 +41,7 @@ function timeToMinutes(t){
     return h*60+m;
 }
 
-/* seeded PRNG so the "made up" schedule is stable across reloads */
+// seeded PRNG so the "made up" schedule is stable across reloads
 function mulberry32(seed){
     return function(){
         seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
@@ -92,7 +92,7 @@ DATES.forEach(day=>{
     });
 });
 
-/* determine live game state at NOW_MINUTES, avoid identical final ties */
+// determine live game state at NOW_MINUTES, avoid identical final ties
 Object.values(schedule).forEach(daySports=>{
     Object.values(daySports).forEach(games=>{
         games.forEach(g=>{
@@ -115,11 +115,11 @@ function gameStatus(g){
     return "live";
 }
 
-/* state */
+// state
 let selectedDay = TODAY;
 let selectedSport = null;
 
-/* render */
+// render
 const dow = (day)=> new Date(2025,9,day).toLocaleDateString('en-US',{weekday:'short'});
 
 document.getElementById('todayLabel').textContent = `${dow(TODAY)}, Oct ${TODAY}`;
@@ -257,7 +257,7 @@ function renderAll(){
 selectedSport = firstSportOfDay(selectedDay);
 renderAll();
 
-setInterval(()=>{
+setInterval(()=>{ // temp
     let changed = false;
     Object.values(schedule).forEach(daySports=>{
         Object.values(daySports).forEach(games=>{
